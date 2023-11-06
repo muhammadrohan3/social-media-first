@@ -8,7 +8,7 @@ async function apiHook(link) {
     
     const data = await axios.get(link)
     .then(res=>{
-        console.log("This is res",res)
+    
         return res.data.books
     })
     .catch(err=>{

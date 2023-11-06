@@ -16,8 +16,8 @@ const height = Dimensions.get("window").height;
 export default function Login() {
   const navigate = useNavigation();
   const [user, setUser] = useState({
-    email: "",
-    password: "",
+    email: "rohan",
+    password: "321",
   });
   const handleSubmit = () => {
     if (user.email.length === 0 || user.password.length === 0) {

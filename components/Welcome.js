@@ -1,7 +1,7 @@
 import { useNavigation, useRoute } from "@react-navigation/native";
 import React, { useState } from "react";
 import { View, Text, TouchableOpacity } from "react-native";
-
+import Nav from "./Nav";
 function Welcome() {
   const router = useRoute();
   const navigate = useNavigation();
@@ -11,11 +11,12 @@ function Welcome() {
       style={{
         flex: 1,
         backgroundColor: "white",
-        justifyContent: "center",
+        justifyContent: "justify-between",
         alignItems: "center",
         gap: 30,
       }}
     >
+      {/* <Nav /> */}
       <Text
         style={{
           fontSize: 30,

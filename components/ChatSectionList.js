@@ -1,12 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  View,
-  Text,
-  FlatList,
-  TouchableOpacity,
-  Image,
-  SectionList,
-} from "react-native";
+import React, {useState, useEffect} from "react";
+import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
 const chatData = [
   {
     name: "Ali",
@@ -33,71 +26,7 @@ const chatData = [
       "https://t4.ftcdn.net/jpg/03/64/21/11/360_F_364211147_1qgLVxv1Tcq0Ohz3FawUfrtONzz8nq3e.jpg",
   },
 ];
-const chatData2 = [
-  {
-    title: "Recent",
-    data: [
-      {
-        name: "Ali",
-        time: "10:00",
-        read: false,
-        message: "Hello",
-        profile:
-          "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
-      },
-      {
-        name: "Ahmed",
-        time: "10:00",
-        read: true,
-        message: "How Are you ? ",
-        profile:
-          "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-250nw-1714666150.jpg",
-      },
-    ],
-  },
-  {
-    title: "New",
-    data: [
-      {
-        name: "Ali",
-        time: "10:00",
-        read: false,
-        message: "Hello",
-        profile:
-          "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
-      },
-      {
-        name: "Ahmed",
-        time: "10:00",
-        read: true,
-        message: "How Are you ? ",
-        profile:
-          "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-250nw-1714666150.jpg",
-      },
-    ],
-  },
-  {
-    title: "Trending",
-    data: [
-      {
-        name: "Ali",
-        time: "10:00",
-        read: false,
-        message: "Hello",
-        profile:
-          "https://imgv3.fotor.com/images/gallery/Realistic-Male-Profile-Picture.jpg",
-      },
-      {
-        name: "Ahmed",
-        time: "10:00",
-        read: true,
-        message: "How Are you ? ",
-        profile:
-          "https://www.shutterstock.com/image-photo/head-shot-portrait-close-smiling-250nw-1714666150.jpg",
-      },
-    ],
-  },
-];
+
 const chat = ({ item }) => {
   console.log(item);
   return (
@@ -106,9 +35,9 @@ const chat = ({ item }) => {
         width: "90%",
         height: 80,
         backgroundColor: "white",
-        borderWidth: 1,
-        borderRadius: 10,
-        padding: 10,
+        borderWidth : 1,
+        borderRadius : 10,
+        padding : 10,
         flexDirection: "row",
         borderColor: "gray",
         justifyContent: "space-between",
@@ -140,6 +69,7 @@ const chat = ({ item }) => {
           fontSize: 20,
           textAlign: "left",
           flex: 0.6,
+          
         }}
       >
         <Text
@@ -229,32 +159,16 @@ function Chats() {
       >
         Chats
       </Text>
-      {/* <FlatList
-        data={chatData}
-        renderItem={chat}
-        style={{
-          width: "100%",
-        }}
-        contentContainerStyle={{
-          alignItems: "center",
-          gap: 10,
-          marginTop: 20,
-        }}
-      /> */}
-      <SectionList
-        sections={chatData2}
-        renderItem={chat}
-        renderSectionHeader={({ section }) => <Text>{section.title}</Text>}
-        keyExtractor={(item, index) => index}
-        style={{
-          width: "100%",
-          
-        }}
-        contentContainerStyle={{
-          alignItems: "center",
-          gap: 10,
-          marginTop: 20,
-        }}
+      <FlatList data={chatData} renderItem={chat} style ={{
+        width:"100%"
+
+      }}
+      contentContainerStyle = {{
+        alignItems:"center",
+        gap : 10,
+        marginTop : 20
+
+      }}
       />
     </View>
   );
